@@ -1,17 +1,29 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Libros</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <!-- <ion-list>
+    <ion-item button *ngFor="let item of libros" [routerLink]="[item.isbn]">
+      <ion-avatar slot="start">
+        <img src="../../assets/imgs/libroBlanco.png" />
+      </ion-avatar>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+      <ion-label class="ion-text-wrap">
+        <h3>{{ item.titulo }}</h3>
+        <p>{{ item.autor }}</p>
+      </ion-label>
+
+      <ion-badge slot="end"> {{ item.vote_average }} </ion-badge>
+    </ion-item>
+  </ion-list> -->
+  <app-tablalibros>
+      
+  </app-tablalibros>
+
+  <ion-infinite-scroll (ionInfinite)="loadMore($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data..."> </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>

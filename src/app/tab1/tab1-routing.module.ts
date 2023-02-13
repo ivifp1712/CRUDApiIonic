@@ -5,7 +5,11 @@ import { Tab1Page } from './tab1.page';
 const routes: Routes = [
   {
     path: '',
-    component: Tab1Page,
+    component: Tab1Page
+  },
+  {
+    path: ':isbn',
+    loadChildren: () => import('../libro-detalles/libro-detalles.module').then( m => m.LibroDetallesPageModule)
   }
 ];
 

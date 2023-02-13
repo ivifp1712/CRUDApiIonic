@@ -1,14 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { libreriaService } from '../../services/libreria.service';
 import { InfiniteScrollCustomEvent, LoadingController } from '@ionic/angular';
-import { libreriaService } from '../services/libreria.service';
-import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-tab1',
-  templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  selector: 'app-tablalibros',
+  templateUrl: './tablalibros.component.html',
+  styleUrls: ['./tablalibros.component.scss'],
 })
-export class Tab1Page {
+export class TablalibrosComponent implements OnInit {
   libros : any = [];
   currentPage = 1;
   constructor(
@@ -49,7 +48,6 @@ export class Tab1Page {
     this.currentPage++;
     this.loadLibros(event);
   }
-
 
 
 
