@@ -28,6 +28,7 @@ export class libreriaService {
     );
   }
   guardarLibro(libro: any): Observable<any> {
+    console.log(libro)
     return this.http.post<any>(
       `${environment.baseUrl}/libreria`,
       libro
