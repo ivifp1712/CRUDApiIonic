@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: Tab2Page,
+  },
+  {
+    path: ':isbn',
+    component: Tab2Page,
   }
 ];
 

@@ -27,4 +27,22 @@ export class libreriaService {
       `${environment.baseUrl}/libreria/${id}`
     );
   }
+  guardarLibro(libro: any): Observable<any> {
+    return this.http.post<any>(
+      `${environment.baseUrl}/libreria`,
+      libro
+    );
+  }
+  actualizarLibro(libro: any): Observable<any> {
+    return this.http.put<any>(
+      `${environment.baseUrl}/libreria/${libro.isbn}`,
+      libro
+    );
+  }
+
+  borrarLibro(isbn: string): Observable<any> {
+    return this.http.delete<any>(
+      `${environment.baseUrl}/libreria/${isbn}`
+    );
+  }
 }

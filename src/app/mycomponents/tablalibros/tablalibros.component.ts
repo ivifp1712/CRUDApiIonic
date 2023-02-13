@@ -19,6 +19,9 @@ export class TablalibrosComponent implements OnInit {
   ngOnInit() {
     this.loadLibros();
   }
+  refrescar(){
+    this.loadLibros();
+  }
 
   async loadLibros(event?: InfiniteScrollCustomEvent) {
     const loading = await this.loadingCtrl.create({

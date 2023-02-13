@@ -21,6 +21,10 @@ export class Tab1Page {
     this.loadLibros();
   }
 
+  refrescar(){
+    this.loadLibros();
+  }
+
   async loadLibros(event?: InfiniteScrollCustomEvent) {
     const loading = await this.loadingCtrl.create({
       message: 'Cargando libros...',

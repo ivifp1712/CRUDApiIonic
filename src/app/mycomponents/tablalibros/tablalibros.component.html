@@ -15,68 +15,23 @@
   </tr>
 
 </table> -->
-
+<ion-button (click)="refrescar()" expand="block" fill="outline" color="primary">
+  <ion-icon slot="start" name="refresh"></ion-icon>
+  Refresh
+</ion-button>
 <ion-grid>
   <ion-row>
     <ion-col size="4">Titulo</ion-col>
     <ion-col size="4">Autor</ion-col>
-    <ion-col size="4">Detalles</ion-col>
+    <ion-col size="4">Acciones</ion-col>
   </ion-row>
   <ion-row *ngFor="let libro of libros">
     <ion-col size="4">{{ libro.titulo }}</ion-col>
     <ion-col size="4">{{ libro.autor }}</ion-col>
     <ion-col size="4">
       <ion-icon name="book" size="large" [routerLink]="[libro.isbn]"></ion-icon>
+      <ion-icon name="create" size="large" [routerLink]="['/tabs/tab2/' + libro.isbn]"></ion-icon>
     </ion-col>
   </ion-row>
 </ion-grid>
-
-<!--  <ion-header-bar class="bar-stable">
-        <h1 class="title">Service Provider Details</h1>
-    </ion-header-bar>
-    <ion-content>
-        <div class="row header">
-          <div class="col">Utility Company Name</div>
-          <div class="col">Service Code</div>
-          <div class="col">Pay Limit</div>
-          <div class="col">Account Number to Use</div>
-          <div class="col"></div>
-        </div>
-        <div class="row" ng-repeat="data in ctrl.data">
-          <div class="col">{{data.name}}</div>
-          <div class="col">{{data.code}}</div>
-          <div class="col">LK {{data.limit}}</div>
-          <div class="col">{{data.account}}</div>
-          <div class="col"><button class="button" ng-click="ctrl.add($index)">Add</button></div>
-        </div>
-    </ion-content> -->
-
-<!-- <ion-header class="bar-stable">
-    <h1 class="title">Service Provider Details</h1>
-</ion-header>
-<div class="tabla">
-  <div class="row header">
-  <div>ISBN</div>
-    <div>Título</div>
-    <div>Autor</div>
-    <div>Editorial</div>
-    <div>Precio</div>
-    <div>Stock</div>
-    <div>Año</div>
-    <div>Categoría</div>
-    <div>Idioma</div>
-</div>
-<div class="row" *ngFor="let libro of libros">
-  <div>{{ libro.isbn }}</div>
-    <div>{{ libro.titulo }}</div>
-    <div>{{ libro.autor }}</div>
-    <div>{{ libro.editorial }}</div>
-    <div>{{ libro.precio }}</div>
-    <div>{{ libro.stock }}</div>
-    <div>{{ libro.year }}</div>
-    <div>{{ libro.categoria }}</div>
-    <div>{{ libro.idioma }}</div>
-</div>
-  
-</div> -->
 
