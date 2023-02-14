@@ -42,6 +42,10 @@
         <ion-icon name="language-outline" slot="start"></ion-icon>
         <ion-label>{{ libro.idioma }}</ion-label>
       </ion-item>
+      <ion-item lines="none">
+        <ion-icon name="trash-outline" slot="start"></ion-icon>
+        <ion-label><ion-button (click)="borrar()" color="danger">Borrar</ion-button></ion-label>
+      </ion-item>
     </ion-card-content>
   </ion-card>
 </ion-content>

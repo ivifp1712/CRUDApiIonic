@@ -1,10 +1,10 @@
 <ion-header>
    <ion-toolbar color="primary"> 
-     <ion-title>Modificar o crear libro</ion-title> 
+     <ion-title>Datos</ion-title> 
    </ion-toolbar> 
  </ion-header> 
   
- <ion-content> 
+ <ion-content style="width: 95%;" class="centrado"> 
    <ion-list> 
      <ion-item> 
        <ion-label position="floating">Título</ion-label> 
@@ -52,8 +52,9 @@
      </ion-item> 
   
    </ion-list> 
-  
-   <ion-button expand="block" (click)="guardar()">Guardar</ion-button> 
-   <!-- delete -->
-    <ion-button expand="block" color="danger" (click)="borrar()">Borrar</ion-button>
+   <br>
+  <div style="text-align: center;">
+    <ion-button (click)="guardar()" color="success">Guardar</ion-button> 
+  </div>
+   
  </ion-content>

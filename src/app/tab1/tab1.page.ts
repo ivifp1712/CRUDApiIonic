@@ -33,14 +33,13 @@ export class Tab1Page {
 
     this.libreriaService.getLibros(this.currentPage).subscribe((res) => {
       loading.dismiss();
-      // log 
-      console.log(res);
+      //console.log(res);
       this.libros = res;
       event?.target.complete();
       if (event) {
         event.target.disabled = res.total_pages === this.currentPage ;
       }
-      console.log(this.libros);
+      //console.log(this.libros);
     },
     (error) => {
       loading.dismiss();

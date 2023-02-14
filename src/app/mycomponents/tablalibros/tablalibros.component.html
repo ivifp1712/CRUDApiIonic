@@ -1,38 +1,29 @@
-<!-- <table>
-  <tr>
-    <th>ISBN</th>
-    <th>Título</th>
-    <th>Autor</th>
-    <th>Detalles</th>
-  </tr>
-  <tr *ngFor="let libro of libros">
-    <td>{{ libro.isbn }}</td>
-    <td>{{ libro.titulo }}</td>
-    <td>{{ libro.autor }}</td>
-    <td>
-      <ion-icon name="book" size="large" [routerLink]="[libro.isbn]"></ion-icon>
-    </td>
-  </tr>
 
-</table> -->
-<ion-button (click)="refrescar()" expand="block" fill="outline" color="primary">
+  <ion-button (click)="refrescar()" expand="block" fill="outline" color="primary">
   <ion-icon slot="start" name="refresh"></ion-icon>
   Refresh
 </ion-button>
 <ion-grid>
   <ion-row>
-    <ion-col size="4" style="font-weight: bold;">Titulo</ion-col>
-    <ion-col size="4" style="font-weight: bold;">Autor</ion-col>
-    <ion-col size="4" style="font-weight: bold;">Acciones</ion-col>
+    <ion-col size="4" sizeXl="2" style="font-weight: bold;">Titulo</ion-col>
+    <ion-col size="4" sizeXl="2" style="font-weight: bold;">Autor</ion-col>
+    <ion-col size="4" sizeXl="2" class="ion-hide-md-down" style="font-weight: bold;">ISBN</ion-col>
+    <ion-col size="4" sizeXl="2" class="ion-hide-md-down" style="font-weight: bold;">Idioma</ion-col>
+    <ion-col size="4" sizeXl="2" class="ion-hide-md-down" style="font-weight: bold;">Precio</ion-col>
+    <ion-col size="4" sizeXl="2" style="font-weight: bold;">Acciones</ion-col>
   </ion-row>
   <ion-row *ngFor="let libro of libros">
-    <ion-col size="4">{{ libro.titulo }}</ion-col>
-    <ion-col size="4">{{ libro.autor }}</ion-col>
-    <ion-col size="4">
+    <ion-col size="4" sizeXl="2" style="border-bottom: 1px solid rgb(130, 130, 130);">{{ libro.titulo }}</ion-col>
+    <ion-col size="4" sizeXl="2" style="border-bottom: 1px solid rgb(130, 130, 130);">{{ libro.autor }}</ion-col>
+    <ion-col sizeXl="2" class="ion-hide-md-down" style="border-bottom: 1px solid rgb(130, 130, 130);">{{ libro.isbn }}</ion-col>
+    <ion-col sizeXl="2" class="ion-hide-md-down" style="border-bottom: 1px solid rgb(130, 130, 130);">{{ libro.idioma }}</ion-col>
+    <ion-col sizeXl="2" class="ion-hide-md-down" style="border-bottom: 1px solid rgb(130, 130, 130);">{{ libro.precio }}</ion-col>
+    <ion-col size="4" sizeXl="2" style="border-bottom: 1px solid rgb(130, 130, 130);">
       <ion-icon name="book" size="large" [routerLink]="[libro.isbn]"></ion-icon>
       &nbsp;
       <ion-icon name="create" size="large" [routerLink]="['/tabs/tab2/' + libro.isbn]"></ion-icon>
     </ion-col>
   </ion-row>
 </ion-grid>
+
 

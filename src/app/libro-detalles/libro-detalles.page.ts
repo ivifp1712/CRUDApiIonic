@@ -26,9 +26,11 @@ export class LibroDetallesPage implements OnInit {
     });
     console.log(this.libro);
   }
- 
-  // openHomepage(url) {
-  //   window.open(url, '_blank');
-  // }
+
+  borrar(){
+    this.libreriaService.borrarLibro(this.libro.isbn).subscribe((res) => {
+      console.log(res);
+    });
+  }
 
 }
