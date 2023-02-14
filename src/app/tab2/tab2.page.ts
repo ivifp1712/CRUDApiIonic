@@ -36,12 +36,7 @@ export class Tab2Page {
   }
 
   guardar() {
-    // console.log(this.libro);
     var libroBuscado: any;
-    // Si el isbn ya existe en la base de datos, se actualiza
-    // Si no existe, se crea un nuevo libro
-
-    //comprobar que los campos no esten vacios
     if (this.libro.isbn == '' || this.libro.titulo == '' || this.libro.autor == '' || this.libro.editorial == '' || this.libro.fecha == '' || this.libro.portada == '' || this.libro.descripcion == '' || this.libro.precio == '' || this.libro.url == '') {
       alert("Rellena todos los campos");
     } else{
@@ -85,31 +80,8 @@ export class Tab2Page {
       }
     });
     }
-
-
-
-    
-
     this.router.navigate(['/tabs/tab1']);
 
   }
-
-  // borrar(){
-  //   this.libreriaService.borrarLibro(this.libro.isbn).subscribe((res) => {
-  //     console.log(res);
-  //   });
-  //   this.libro = {
-  //     isbn: '',
-  //     titulo: '',
-  //     autor: '',
-  //     editorial: '',
-  //     fecha: '',
-  //     portada: '',
-  //     descripcion: '',
-  //     precio: '',
-  //     url: '',
-  //   };
-  //   this.router.navigate(['/tabs/tab1']);
-  // }
 
 }
