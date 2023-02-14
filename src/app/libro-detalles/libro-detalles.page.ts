@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { libreriaService } from '../services/libreria.service';
 
@@ -12,11 +12,10 @@ import { libreriaService } from '../services/libreria.service';
 export class LibroDetallesPage implements OnInit {
   libro : any;
  
-  constructor(private route: ActivatedRoute, private libreriaService: libreriaService) { 
+  constructor(private route: ActivatedRoute, private libreriaService: libreriaService, private router : Router) { 
   }
  
   ngOnInit() {
-    // var isbn = "978-84-376-0494-7"
     var isbn : any;
     isbn = this.route.snapshot.paramMap.get('isbn') ? this.route.snapshot.paramMap.get('isbn') : "978-84-376-0494-7";
     console.log(isbn);
@@ -31,6 +30,7 @@ export class LibroDetallesPage implements OnInit {
     this.libreriaService.borrarLibro(this.libro.isbn).subscribe((res) => {
       console.log(res);
     });
+    this.router.navigate(['/tabs/tab1']);
   }
 
 }
