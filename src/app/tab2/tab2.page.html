@@ -6,52 +6,56 @@
   
  <ion-content> 
    <ion-list> 
-     <ion-item> 
+    <div>
+      <ion-label>Introduce los datos correctamente</ion-label>
+    </div>
+     <ion-item fill="outline"> 
        <ion-label position="floating">Título</ion-label> 
-       <ion-input [(ngModel)]="libro.titulo"></ion-input> 
+       <ion-input [(ngModel)]="libro.titulo" text required></ion-input>
      </ion-item> 
   
-     <ion-item> 
+     <ion-item fill="outline"> 
        <ion-label position="floating">Autor</ion-label> 
-       <ion-input [(ngModel)]="libro.autor"></ion-input> 
+       <ion-input [(ngModel)]="libro.autor" text required></ion-input> 
      </ion-item> 
   
-     <ion-item> 
+     <ion-item fill="outline"> 
        <ion-label position="floating">Editorial</ion-label> 
-       <ion-input [(ngModel)]="libro.editorial"></ion-input> 
+       <ion-input [(ngModel)]="libro.editorial" text required></ion-input> 
      </ion-item> 
   
-     <ion-item> 
+     <ion-item fill="outline"> 
        <ion-label position="floating">ISBN</ion-label> 
-       <ion-input [(ngModel)]="libro.isbn"></ion-input> 
+       <ion-input [(ngModel)]="libro.isbn" text required></ion-input> 
      </ion-item> 
   
-     <ion-item> 
+     <ion-item fill="outline"> 
        <ion-label position="floating">Año</ion-label> 
-       <ion-input [(ngModel)]="libro.year"></ion-input> 
+       <ion-input [(ngModel)]="libro.year" number required></ion-input> 
      </ion-item> 
   
-     <ion-item> 
+     <ion-item fill="outline"> 
        <ion-label position="floating">Precio</ion-label> 
-       <ion-input [(ngModel)]="libro.precio"></ion-input> 
+       <ion-input [(ngModel)]="libro.precio" number required></ion-input> 
      </ion-item> 
   
-     <ion-item> 
+     <ion-item fill="outline"> 
        <ion-label position="floating">Stock</ion-label> 
-       <ion-input [(ngModel)]="libro.stock"></ion-input> 
+       <ion-input [(ngModel)]="libro.stock" number required></ion-input> 
      </ion-item> 
 
-     <ion-item> 
+     <ion-item fill="outline"> 
        <ion-label position="floating">Idioma</ion-label> 
-       <ion-input [(ngModel)]="libro.idioma"></ion-input> 
+       <ion-input [(ngModel)]="libro.idioma" text required></ion-input> 
      </ion-item> 
 
-     <ion-item> 
+     <ion-item fill="outline"> 
        <ion-label position="floating">Categoría</ion-label> 
-       <ion-input [(ngModel)]="libro.categoria"></ion-input> 
+       <ion-input [(ngModel)]="libro.categoria" text required></ion-input> 
      </ion-item> 
   
    </ion-list> 
+
   <div style="text-align: center;">
     <ion-button (click)="guardar()" color="success">Guardar</ion-button> 
   </div>
