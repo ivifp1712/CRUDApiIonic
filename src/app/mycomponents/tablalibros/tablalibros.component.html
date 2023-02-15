@@ -19,9 +19,9 @@
     <ion-col sizeXl="2" class="ion-hide-xl-down" style="border-bottom: 1px solid rgb(130, 130, 130);">{{ libro.idioma }}</ion-col>
     <ion-col sizeXl="2" class="ion-hide-xl-down" style="border-bottom: 1px solid rgb(130, 130, 130);">{{ libro.precio }}</ion-col>
     <ion-col size="4" sizeXl="2" style="border-bottom: 1px solid rgb(130, 130, 130);">
-      <ion-icon name="book" size="large" [routerLink]="[libro.isbn]"></ion-icon>
+      <ion-icon name="book" size="large" [routerLink]="[libro.isbn]" color="success"></ion-icon>
       &nbsp;
-      <ion-icon name="create" size="large" [routerLink]="['/tabs/tab2/' + libro.isbn]"></ion-icon>
+      <ion-icon name="create" size="large" [routerLink]="['/tabs/tab2/' + libro.isbn]" color="warning"></ion-icon>
     </ion-col>
   </ion-row>
 </ion-grid>

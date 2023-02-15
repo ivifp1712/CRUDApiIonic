@@ -5,56 +5,55 @@
  </ion-header> 
   
  <ion-content> 
-   <ion-list> 
-    <div>
-      <ion-label>Introduce los datos correctamente</ion-label>
-    </div>
-     <ion-item > 
-       <ion-label position="floating">Título</ion-label> 
-       <ion-input [(ngModel)]="libro.titulo" text ></ion-input>
-     </ion-item> 
-  
-     <ion-item > 
-       <ion-label position="floating">Autor</ion-label> 
-       <ion-input [(ngModel)]="libro.autor" text ></ion-input> 
-     </ion-item> 
-  
-     <ion-item > 
-       <ion-label position="floating">Editorial</ion-label> 
-       <ion-input [(ngModel)]="libro.editorial" text ></ion-input> 
-     </ion-item> 
-  
-     <ion-item > 
-       <ion-label position="floating">ISBN</ion-label> 
-       <ion-input [(ngModel)]="libro.isbn" text ></ion-input> 
-     </ion-item> 
-  
-     <ion-item > 
-       <ion-label position="floating">Año</ion-label> 
-       <ion-input [(ngModel)]="libro.year" number ></ion-input> 
-     </ion-item> 
-  
-     <ion-item > 
-       <ion-label position="floating">Precio</ion-label> 
-       <ion-input [(ngModel)]="libro.precio" number ></ion-input> 
-     </ion-item> 
-  
-     <ion-item > 
-       <ion-label position="floating">Stock</ion-label> 
-       <ion-input [(ngModel)]="libro.stock" number ></ion-input> 
-     </ion-item> 
-
-     <ion-item > 
-       <ion-label position="floating">Idioma</ion-label> 
-       <ion-input [(ngModel)]="libro.idioma" text ></ion-input> 
-     </ion-item> 
-
-     <ion-item > 
-       <ion-label position="floating">Categoría</ion-label> 
-       <ion-input [(ngModel)]="libro.categoria" text ></ion-input> 
-     </ion-item> 
-  
-   </ion-list> 
+  <p class="titu">Introduce los datos correctamente</p>
+   <ion-list class="formu">
+      
+        <ion-item > 
+          <ion-label position="floating">Título</ion-label> 
+          <ion-input [(ngModel)]="libro.titulo" text ></ion-input>
+        </ion-item> 
+     
+        <ion-item > 
+          <ion-label position="floating">Autor</ion-label> 
+          <ion-input [(ngModel)]="libro.autor" text ></ion-input> 
+        </ion-item> 
+     
+        <ion-item > 
+          <ion-label position="floating">Editorial</ion-label> 
+          <ion-input [(ngModel)]="libro.editorial" text ></ion-input> 
+        </ion-item> 
+     
+        <ion-item > 
+          <ion-label position="floating">ISBN</ion-label> 
+          <ion-input [(ngModel)]="libro.isbn" text ></ion-input> 
+        </ion-item> 
+     
+        <ion-item > 
+          <ion-label position="floating">Año</ion-label> 
+          <ion-input [(ngModel)]="libro.year" number ></ion-input> 
+        </ion-item> 
+     
+        <ion-item > 
+          <ion-label position="floating">Precio</ion-label> 
+          <ion-input [(ngModel)]="libro.precio" number ></ion-input> 
+        </ion-item> 
+     
+        <ion-item > 
+          <ion-label position="floating">Stock</ion-label> 
+          <ion-input [(ngModel)]="libro.stock" number ></ion-input> 
+        </ion-item> 
+   
+        <ion-item > 
+          <ion-label position="floating">Idioma</ion-label> 
+          <ion-input [(ngModel)]="libro.idioma" text ></ion-input> 
+        </ion-item> 
+   
+        <ion-item > 
+          <ion-label position="floating">Categoría</ion-label> 
+          <ion-input [(ngModel)]="libro.categoria" text ></ion-input> 
+        </ion-item> 
+</ion-list> 
+    
 
   <div style="text-align: center;">
     <ion-button (click)="guardar()" color="success">Guardar</ion-button> 
