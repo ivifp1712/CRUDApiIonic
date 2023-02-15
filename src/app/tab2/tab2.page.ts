@@ -18,11 +18,11 @@ export class Tab2Page {
       titulo: '',
       autor: '',
       editorial: '',
-      fecha: '',
-      portada: '',
-      descripcion: '',
+      year: '',
       precio: '',
-      url: '',
+      stock: '',
+      idioma: '',
+      categoria: '',
     };
 
     var isbn: any;
@@ -37,7 +37,7 @@ export class Tab2Page {
 
   guardar() {
     var libroBuscado: any;
-    if (this.libro.isbn == '' || this.libro.titulo == '' || this.libro.autor == '' || this.libro.editorial == '' || this.libro.fecha == '' || this.libro.portada == '' || this.libro.descripcion == '' || this.libro.precio == '' || this.libro.url == '') {
+    if (this.libro.isbn == '' || this.libro.titulo == '' || this.libro.autor == '' || this.libro.editorial == '' || this.libro.year == '' || this.libro.precio == '' || this.libro.stock == '' || this.libro.idioma == '' || this.libro.categoria == '') {
       alert("Rellena todos los campos");
     } else{
       this.libreriaService.getLibrosDetalles(this.libro.isbn).subscribe((res) => {
@@ -53,11 +53,11 @@ export class Tab2Page {
         titulo: '',
         autor: '',
         editorial: '',
-        fecha: '',
-        portada: '',
-        descripcion: '',
+        year: '',
         precio: '',
-        url: '',
+        stock: '',
+        idioma: '',
+        categoria: '',
       };
       } 
       else {
@@ -71,11 +71,11 @@ export class Tab2Page {
           titulo: '',
           autor: '',
           editorial: '',
-          fecha: '',
-          portada: '',
-          descripcion: '',
+          year: '',
           precio: '',
-          url: '',
+          stock: '',
+          idioma: '',
+          categoria: '',
         };
       }
     });
